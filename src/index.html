@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <dialog id="add-project-dialog">
+      <form>
+        <div>
+          <label for="project-name">Project name</label>
+          <input type="text" id="project-name" required />
+        </div>
+        <button class="submit-project-button">Add project</button>
+      </form>
+    </dialog>
+    <dialog id="add-todo-dialog">
+      <form>
+        <div class="title-section">
+          <label for="title-input">Title</label>
+          <input type="text" id="title-input" required />
+        </div>
+        <div class="description-section">
+          <label for="description-input">Description</label>
+          <textarea id="description-input"></textarea>
+        </div>
+        <div class="priority-section">
+          <label for="priority-input">Priority</label>
+          <select name="priority-input" id="priority-input">
+            <option value="low">Low</option>
+            <option value="mid">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="date-section">
+          <label for="date-input">Due date</label>
+          <input type="date" id="date-input" required />
+        </div>
+        <button class="submit-todo-button">Add todo</button>
+      </form>
+    </dialog>
+    <dialog id="edit-todo-dialog">
+      <form>
+        <div class="title-section">
+          <label for="title-input">Title</label>
+          <input type="text" id="title-input" required />
+        </div>
+        <div class="description-section">
+          <label for="description-input">Description</label>
+          <textarea id="description-input"></textarea>
+        </div>
+        <div class="priority-section">
+          <label for="priority-input">Priority</label>
+          <select name="priority-input" id="priority-input">
+            <option value="low">Low</option>
+            <option value="mid">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <div class="date-section">
+          <label for="date-input">Due date</label>
+          <input type="date" id="date-input" required />
+        </div>
+        <button class="save-todo-button">Save changes</button>
+      </form>
+    </dialog>
+    <div id="sidebar">
+      <div class="main">
+        <div class="today">
+          <img class="today-logo" src="./assets/star.svg" alt="" />
+          <h1>Today</h1>
+        </div>
+        <div class="projects">
+          <!-- <div class="project">
+            <h1>Sample project</h1>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+          </div>
+          <div class="project">
+            <h1>Sample project</h1>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+            <h2 class="Todo">Sample todo</h2>
+          </div> -->
+        </div>
+      </div>
+      <div class="add-project">
+        <button class="add-project-button">Add project</button>
+      </div>
+    </div>
+    <div id="content">
+      <div class="dashboard"></div>
+    </div>
+  </body>
+</html>

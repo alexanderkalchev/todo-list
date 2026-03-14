@@ -1,18 +1,18 @@
 {
+  "type": "module",
   "name": "webpack-template",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/alexanderkalchev/webpack-template#readme",
+  "homepage": "https://github.com/alexanderkalchev/todo-list#readme",
   "bugs": {
-    "url": "https://github.com/alexanderkalchev/webpack-template/issues"
+    "url": "https://github.com/alexanderkalchev/todo-list/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderkalchev/webpack-template.git"
+    "url": "git+https://github.com/alexanderkalchev/todo-list.git"
   },
   "license": "ISC",
   "author": "Aleksandar Kalchev",
-  "type": "commonjs",
   "main": "index.js",
   "devDependencies": {
     "css-loader": "^7.1.4",

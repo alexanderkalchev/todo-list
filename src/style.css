@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.today-logo{
+    width:30px;
+}
+
+body{
+    display:grid;
+    grid-template-columns: minmax(250px, auto) 1fr;
+    grid-template-rows: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+dialog:modal{
+    background-color:rgb(140, 140, 140,0);
+    border:none;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding:24px;
+        gap:12px;
+        width:400px;
+        input{
+            width:100%;
+            height:25px;
+            border:none;
+            background-color: rgb(200, 200, 200);
+            border-radius:12px;
+            margin-top: 12px;
+            padding: 8px 12px;
+            font-size:1rem;
+        }
+        textarea{
+            width:100%;
+            height:15ch;
+            resize: none;
+            margin-top: 12px;
+            font-size:1rem;
+        }
+        button{
+            font-family: inherit;
+            font-size:1rem;
+            width:100%;
+            padding: 8px 0;
+            border:none;
+            border-radius:8px;
+            background-color:rgb(62, 155, 255);
+            color:white;
+        }
+    }
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(0px);
+}
+
+body #sidebar{
+    background-color: rgb(244, 245, 247);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+
+    .main{
+        display:flex;
+        flex-direction: column;
+        gap:24px;
+
+        .projects{
+            display:flex;
+            flex-direction: column;
+            height:700px;
+            gap:24px;
+            overflow-y:scroll;
+            scrollbar-color:rgb(0,0,0,0) rgba(0, 0, 0,0);
+        }
+    }
+
+    .add-project button{
+        font-family: inherit;
+        font-size:1.4rem;
+        width:100%;
+        padding: 8px 0;
+        border:none;
+        border-radius:8px;
+        background-color:rgb(62, 155, 255);
+        color:white;
+    }
+
+    .today{
+        display:flex;
+        gap:12px;
+        h1{
+            font-weight: 600;
+            font-size:1.7rem;
+        }
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+        h1{
+            font-size:1.7rem;
+            font-weight: 600;
+        }
+        h2{
+            font-size:1.2rem;
+            font-weight: normal;
+        }
+    }
+}
+
+body #content>div{
+    max-width:1200px;
+    margin: 0 auto;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    >div:first-child{
+        display:flex;
+        justify-content: space-between;
+        button{
+            font-family: inherit;
+            font-size:1rem;
+            padding: 8px 24px;
+            border:none;
+            border-radius:8px;
+            background-color:rgb(62, 155, 255);
+            color:white; 
+        }
+    }
+    >div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        img{
+            width:30px;
+        }
+        >div{
+            display:flex;
+            justify-content: space-between;
+            position:relative;
+            input[type=checkbox]{
+                transform:scale(1.5);
+            }
+            >div{
+                display:flex;
+                align-items: center;
+                gap:12px;
+                button{
+                    background-color: rgb(255, 70, 70);
+                    border:none;
+                    padding: 8px 24px;
+                    color:white;
+                    font-size: 0.9rem;
+                    border-radius: 8px;
+                }
+            }
+            h2{
+                font-weight: 400;
+                position:relative;
+            }
+            h2::before{
+                position:absolute;
+                content:"";
+                top: calc(50% - 5px);
+                right: -15px;
+                border-radius:10px;
+                width:10px;
+                height:10px;
+            }
+            h2.low-priority::before{
+                background-color: rgb(60, 60, 255);
+            }
+            h2.mid-priority::before{
+                background-color: rgb(255, 183, 0);
+            }
+            h2.high-priority::before{
+                background-color: rgb(255, 0, 0);
+            }
+        }
+        width:100%;
+        
+    }
+    
+}
+
+.completed-todo h2{
+    position:relative;
+}
+
+.completed-todo h2::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    border-bottom:3px solid black;
+    width:100%;
+}
