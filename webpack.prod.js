@@ -16,7 +16,7 @@ export default {
     plugins: [
         new HtmlWebpackPlugin({template: "./src/index.html"})
     ],
-    modules:{
+    module:{
         rules:[
             {
                 test: /\.css$/i,
